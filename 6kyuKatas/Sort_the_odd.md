@@ -37,12 +37,9 @@ def sort_array(source_array):
 
 
 ```python
-def sort_array(source_array):
-    odds = sorted([n for n in source_array if n % 2 != 0])
-    for n in source_array:
-        if n % 2 == 0:
-            odds.insert(source_array.index(n), n)
-    return odds
+def sort_array(arr):
+  odds = sorted((x for x in arr if x%2 != 0), reverse=True)
+  return [x if x%2==0 else odds.pop() for x in arr]
 ```
 
 ---
